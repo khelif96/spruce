@@ -158,7 +158,7 @@
     "prompt": "^1.0.0",
     "prompt-run": "^1.4.5",
     "react-test-renderer": "16.12.0",
-    "simple-git": "^2.6.0",
+    "simple-git": "^2.20.1",
     "ts-loader": "6.2.2",
     "tslint": "5.20.1",
     "tslint-config-prettier": "1.18.0",
