@@ -2884,17 +2884,17 @@
     "@leafygreen-ui/popover" "^5.1.0"
     react-transition-group "^4.4.1"
 
-"@leafygreen-ui/palette@2.0.0", "@leafygreen-ui/palette@^2.0.0":
+"@leafygreen-ui/palette@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/palette/-/palette-2.0.0.tgz#64994c6f3cac7a533904c69e5f660e1bf5964ff0"
   integrity sha512-QA7MKgg46RH+SRJIlSa1ebbrCr1Iijeo7FL3wAG+2vEKoPolpOd165p+q/awGaTe0COj2r1FMu93JvVZ3LJPsQ==
 
-"@leafygreen-ui/palette@2.0.1", "@leafygreen-ui/palette@^2.0.1":
+"@leafygreen-ui/palette@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/palette/-/palette-2.0.1.tgz#37b2982d80df7faaca0c7f3c473fb6636786da3c"
   integrity sha512-xwD6kOokWvaygxF0T2gnf77HEu68G7EXr1ZrNiNtZzg80Y1V2hikhUNoESWij6g/A6qJZvAiwpseflVo3PnlHQ==
 
-"@leafygreen-ui/palette@^2.0.2":
+"@leafygreen-ui/palette@^2.0.0", "@leafygreen-ui/palette@^2.0.1", "@leafygreen-ui/palette@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/palette/-/palette-2.0.2.tgz#dc9e1c11079e043572ed746d734fb4fb8db47a7c"
   integrity sha512-QxjLcJu1WqKjJvlTw6nmq3gdjBEVy9rXdxBlkMR0hgvyzK3qW6w+iGaJExnjMRppzND7ijzsF0IJn1TYKNmevg==
@@ -2930,13 +2930,13 @@
     "@leafygreen-ui/lib" "^5.1.1"
     "@leafygreen-ui/palette" "^2.0.2"
 
-"@leafygreen-ui/radio-group@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@leafygreen-ui/radio-group/-/radio-group-2.0.1.tgz#aafe21207387dcaeaa0c33e6c048d4d4c6c9daa0"
-  integrity sha512-K/RN/Kw3/Ie9DWoS2fVFc3NwiGmJUvQ1g9zjlFRLNXaeK0jEN/tfe2iGY5EPfRjJt8DlfthPFTdhbGeqtJEjXg==
+"@leafygreen-ui/radio-group@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/radio-group/-/radio-group-6.0.1.tgz#d86b092f1e5b4bf18248f7a431651a8f26efb678"
+  integrity sha512-n5UcWQGAliTYQDkiDCOnCu3k4imW6Ie91QyZM7XxXRNCQotDwVYZ8QttWWleopstktvziQGCuTEvP+M+oU8gyg==
   dependencies:
-    "@leafygreen-ui/lib" "^4.0.0"
-    "@leafygreen-ui/theme" "^2.0.0"
+    "@leafygreen-ui/lib" "^6.0.1"
+    "@leafygreen-ui/palette" "^3.0.1"
 
 "@leafygreen-ui/side-nav@2.0.14":
   version "2.0.14"
