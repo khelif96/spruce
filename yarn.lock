@@ -2387,6 +2387,16 @@
   dependencies:
     "@leafygreen-ui/lib" "^5.1.1"
 
+"@leafygreen-ui/interaction-ring@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/interaction-ring/-/interaction-ring-1.0.1.tgz#645b954dfbd47d89449ab05ef17ff28bb0f23dc8"
+  integrity sha512-Q7Vj07vkAtZdA99PWv80Z9mswseDIZBTYTwEfjfeKkUyE04+YLrafAhOR7lZGjgaO/1HUBhx07mPUxAcUWqs9Q==
+  dependencies:
+    "@leafygreen-ui/emotion" "^3.0.1"
+    "@leafygreen-ui/leafygreen-provider" "^2.0.1"
+    "@leafygreen-ui/lib" "^6.1.2"
+    "@leafygreen-ui/palette" "^3.1.0"
+
 "@leafygreen-ui/leafygreen-provider@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/leafygreen-provider/-/leafygreen-provider-1.1.1.tgz#807bc0b240b3bd1ae76580b12f3419b2c9abc0f8"
@@ -2403,7 +2413,7 @@
     "@leafygreen-ui/hooks" "^4.0.1"
     "@leafygreen-ui/lib" "^5.1.1"
 
-"@leafygreen-ui/leafygreen-provider@^2.0.2":
+"@leafygreen-ui/leafygreen-provider@^2.0.1", "@leafygreen-ui/leafygreen-provider@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/leafygreen-provider/-/leafygreen-provider-2.0.2.tgz#d03b898a21dc2969bfd9e23a472c8f72b7e5c8c2"
   integrity sha512-0lGFRJWuhao4OcPtMYhA+tH8VceCdz8HCL7oDylJTCDhw4NbFATsyy4abeJc+WKFngzR6EwlOaLeC5HFsJMu9A==
@@ -2500,13 +2510,14 @@
     "@leafygreen-ui/lib" "^5.1.1"
     "@leafygreen-ui/palette" "^2.0.2"
 
-"@leafygreen-ui/radio-group@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@leafygreen-ui/radio-group/-/radio-group-2.0.1.tgz#aafe21207387dcaeaa0c33e6c048d4d4c6c9daa0"
-  integrity sha512-K/RN/Kw3/Ie9DWoS2fVFc3NwiGmJUvQ1g9zjlFRLNXaeK0jEN/tfe2iGY5EPfRjJt8DlfthPFTdhbGeqtJEjXg==
+"@leafygreen-ui/radio-group@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/radio-group/-/radio-group-7.0.1.tgz#bed1ad61b5ce8e27bf8377a32607b38d62cb8148"
+  integrity sha512-2F82UYmS3Cz7YEsshqi3ZxqLEtrMJYKcm1QaPOxKZdWe24KQd5y/2sLKVZ5Q8ndK5p8H5gdFaa787b/4oqoTMA==
   dependencies:
-    "@leafygreen-ui/lib" "^4.0.0"
-    "@leafygreen-ui/theme" "^2.0.0"
+    "@leafygreen-ui/interaction-ring" "^1.0.0"
+    "@leafygreen-ui/lib" "^6.1.2"
+    "@leafygreen-ui/palette" "^3.1.0"
 
 "@leafygreen-ui/side-nav@2.0.14":
   version "2.0.14"
