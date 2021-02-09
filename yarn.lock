@@ -46,7 +46,26 @@
     lodash "^4.17.15"
     resize-observer-polyfill "^1.5.0"
 
-"@apollo/client@3.3.7", "@apollo/client@latest":
+"@apollo/client@3.3.9":
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.3.9.tgz#f3ad07fd3f3ef4aaf9a25e3b5f99e5cca6440322"
+  integrity sha512-4koVaCKcztuNZCiKP/nyghCVon1Y0+EoIpBytTDTvn7L+QkEQpgKZiWcRGnuJjdvL8QlKiiV7zhdJOiDhIoiUw==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.0.0"
+    "@types/zen-observable" "^0.8.0"
+    "@wry/context" "^0.5.2"
+    "@wry/equality" "^0.3.0"
+    fast-json-stable-stringify "^2.0.0"
+    graphql-tag "^2.12.0"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.14.0"
+    prop-types "^15.7.2"
+    symbol-observable "^2.0.0"
+    ts-invariant "^0.6.0"
+    tslib "^1.10.0"
+    zen-observable "^0.8.14"
+
+"@apollo/client@latest":
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.3.7.tgz#f15bf961dc0c2bee37a47bf86b8881fdc6183810"
   integrity sha512-Cb0OqqvlehlRHtHIXRIS/Pe5WYU4hHl1FznXTRSxBAN42WmBUM3zy/Unvw183RdWMyV6Kc2pFKOEuaG1K7JTAQ==
@@ -2495,6 +2514,21 @@
     "@leafygreen-ui/lib" "^6.2.0"
     "@leafygreen-ui/palette" "^3.1.0"
     "@leafygreen-ui/typography" "^7.3.2"
+
+"@leafygreen-ui/toast@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/toast/-/toast-0.4.2.tgz#7dfd4806e95a6054aae050a9e070928b8156f184"
+  integrity sha512-gSoCjLgk4zbgab/EGUanqW6SiIJMpHZqRSfJqqcFTFwPDV63rxEnDojV8Zpe6Dv64AznKayb74tM1xWMegpLgg==
+  dependencies:
+    "@leafygreen-ui/icon" "^9.0.0"
+    "@leafygreen-ui/icon-button" "^9.0.1"
+    "@leafygreen-ui/lib" "^6.0.1"
+    "@leafygreen-ui/palette" "^3.0.1"
+    "@leafygreen-ui/portal" "^3.0.1"
+    "@leafygreen-ui/tokens" "^0.5.0"
+    "@leafygreen-ui/typography" "^7.3.2"
+    lodash "^4.17.20"
+    react-transition-group "^4.4.1"
 
 "@leafygreen-ui/toggle@7.0.1":
   version "7.0.1"
@@ -10628,10 +10662,12 @@ graphql-request@^3.3.0:
     extract-files "^9.0.0"
     form-data "^3.0.0"
 
-graphql-tag@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.11.0.tgz#1deb53a01c46a7eb401d6cb59dec86fa1cccbffd"
-  integrity sha512-VmsD5pJqWJnQZMUeRwrDhfgoyqcfwEkvtpANqcoUG8/tOLkwNgU9mzub/Mc78OJMhHjx7gfAMTxzdG43VGg3bA==
+graphql-tag@^2.11.0, graphql-tag@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.12.0.tgz#1f0fe5b1e303b64c76db70838b23c4c58c7a4fd5"
+  integrity sha512-iK040pFYpQpHfqF5UJOlYu2XEw6wx56aiyKJP1zqhxabGssqfbTIqz6U++cBwx/Izad0JNq6IsWvrL+p6d1GOA==
+  dependencies:
+    tslib "^1.14.1"
 
 graphql-upload@^11.0.0:
   version "11.0.0"
