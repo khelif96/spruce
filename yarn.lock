@@ -2496,6 +2496,21 @@
     "@leafygreen-ui/palette" "^3.1.0"
     "@leafygreen-ui/typography" "^7.3.2"
 
+"@leafygreen-ui/toast@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/toast/-/toast-0.4.2.tgz#7dfd4806e95a6054aae050a9e070928b8156f184"
+  integrity sha512-gSoCjLgk4zbgab/EGUanqW6SiIJMpHZqRSfJqqcFTFwPDV63rxEnDojV8Zpe6Dv64AznKayb74tM1xWMegpLgg==
+  dependencies:
+    "@leafygreen-ui/icon" "^9.0.0"
+    "@leafygreen-ui/icon-button" "^9.0.1"
+    "@leafygreen-ui/lib" "^6.0.1"
+    "@leafygreen-ui/palette" "^3.0.1"
+    "@leafygreen-ui/portal" "^3.0.1"
+    "@leafygreen-ui/tokens" "^0.5.0"
+    "@leafygreen-ui/typography" "^7.3.2"
+    lodash "^4.17.20"
+    react-transition-group "^4.4.1"
+
 "@leafygreen-ui/toggle@7.0.1":
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/toggle/-/toggle-7.0.1.tgz#27a7794f449c6ea014cc08de416fdbbbf020baf3"
@@ -19996,10 +20011,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.2.tgz#6369ef22516fe5e10304aae5a5c4862db55380e9"
-  integrity sha512-thGloWsGH3SOxv1SoY7QojKi0tc+8FnOmiarEGMbd/lar7QOEd3hvlx3Fp5y6FlDUGl9L+pd4n2e+oToGMmhRQ==
+typescript@4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.4.tgz#f058636e2f4f83f94ddaae07b20fd5e14598432f"
+  integrity sha512-+Uru0t8qIRgjuCpiSPpfGuhHecMllk5Zsazj5LZvVsEStEjmIRRBZe+jHjGQvsgS7M1wONy2PQXd67EMyV6acg==
 
 ua-parser-js@^0.7.18:
   version "0.7.23"
