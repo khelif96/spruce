@@ -132,7 +132,7 @@
     "@cypress/webpack-preprocessor": "5.4.6",
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/jest": "^11.9.1",
-    "@graphql-codegen/cli": "1.19.4",
+    "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/typescript": "1.19.0",
     "@graphql-codegen/typescript-operations": "1.17.12",
     "@graphql-eslint/eslint-plugin": "^3.10.2",
