@@ -134,7 +134,7 @@
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/jest": "^11.9.1",
     "@graphql-codegen/cli": "1.19.4",
-    "@graphql-codegen/typescript": "1.19.0",
+    "@graphql-codegen/typescript": "2.5.1",
     "@graphql-codegen/typescript-operations": "1.17.12",
     "@graphql-eslint/eslint-plugin": "^3.10.2",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
