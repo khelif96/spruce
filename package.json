@@ -189,7 +189,7 @@
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.1.0",
     "http-proxy": "^1.18.1",
-    "husky": "4.3.0",
+    "husky": "8.0.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "28.1.0",
     "jest-environment-jsdom": "^28.1.0",
