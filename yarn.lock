@@ -4100,15 +4100,15 @@
     focus-trap-react "8.4.2"
     react-transition-group "^4.4.1"
 
-"@leafygreen-ui/palette@3.2.2", "@leafygreen-ui/palette@^3.2.1", "@leafygreen-ui/palette@^3.2.2":
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/@leafygreen-ui/palette/-/palette-3.2.2.tgz#9fc9a8051d9a07cbc50a7f8918f33e146d717070"
-  integrity sha512-Oqjz6Qfapm8jB9rw4r9C1yq5XFJRSZ6xSCCGu6Oz8nR0o66xzCxsp0h96tPcrSFWwOrJJxYsQPSGHVsUmTJDzw==
-
 "@leafygreen-ui/palette@3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@leafygreen-ui/palette/-/palette-3.3.0.tgz#4757c53a9f0249f52e16640beb0c43840a64344b"
   integrity sha512-B3fveUzs7r+yoNRscAJ3Tfjcdb2xnXhAlfYDgSUwlr9PFnCcZs2y/8lEBmsnRAdQzN37vGY2LiUbVW0gJ9DgxA==
+
+"@leafygreen-ui/palette@3.4.2", "@leafygreen-ui/palette@^3.2.1", "@leafygreen-ui/palette@^3.2.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@leafygreen-ui/palette/-/palette-3.4.2.tgz#a54b772ded18407d0e0f4eafa7279a0282b5a237"
+  integrity sha512-uR+fPOlU2Hyg1gHb4iFDtZE1SRmuj591apZpHYwAJ3JF1oqHmHVUZy9XTGN+V1Y299FGWsKrCU7OJxS7bg3nDg==
 
 "@leafygreen-ui/popover@7.2.2", "@leafygreen-ui/popover@^7.2.2":
   version "7.2.2"
