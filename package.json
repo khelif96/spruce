@@ -129,7 +129,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
-    "@babel/plugin-proposal-private-property-in-object": "^7.17.12",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
     "@babel/preset-react": "^7.12.13",
     "@bugsnag/source-maps": "^2.3.0",
     "@emotion/babel-plugin": "^11.1.2",
