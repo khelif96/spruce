@@ -6,7 +6,6 @@ import TextInput from "@leafygreen-ui/text-input";
 import Tooltip from "@leafygreen-ui/tooltip";
 import { Body, Disclaimer } from "@leafygreen-ui/typography";
 import pluralize from "pluralize";
-import { LoadingButton } from "components/Buttons";
 import Icon from "components/Icon";
 import { CharKey, ModifierKey } from "constants/keys";
 import { size } from "constants/tokens";
@@ -37,26 +36,26 @@ interface Props {
   setSelectedBuildVariantTasks: (vt: VariantTasksState) => void;
   activatedVariants?: VariantTask[];
   activated: boolean;
-  loading: boolean;
-  onClickSchedule: () => void;
   selectedAliases: AliasState;
   setSelectedAliases: (aliases: AliasState) => void;
   childPatches: ChildPatchAliased[];
   selectableAliases: PatchTriggerAlias[];
+  totalSelectedTaskCount: number;
+  aliasCount: number;
 }
 
 const ConfigureTasks: React.VFC<Props> = ({
-  selectedBuildVariants,
-  selectedBuildVariantTasks,
-  setSelectedBuildVariantTasks,
   activated,
   activatedVariants = [],
-  loading,
-  onClickSchedule,
-  selectedAliases,
-  setSelectedAliases,
+  aliasCount,
   childPatches,
   selectableAliases,
+  selectedAliases,
+  selectedBuildVariants,
+  selectedBuildVariantTasks,
+  setSelectedAliases,
+  setSelectedBuildVariantTasks,
+  totalSelectedTaskCount,
 }) => {
   const [search, setSearch] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
@@ -69,10 +68,7 @@ const ConfigureTasks: React.VFC<Props> = ({
       searchRef.current?.focus();
     }
   );
-  const aliasCount = Object.values(selectedAliases).reduce(
-    (count, alias) => count + (alias ? 1 : 0),
-    0
-  );
+
   const childPatchCount = childPatches?.length || 0;
   const totalDownstreamTaskCount = aliasCount + childPatchCount;
 
@@ -81,12 +77,6 @@ const ConfigureTasks: React.VFC<Props> = ({
   ).reduce(
     (count, tasks) =>
       count + (Object.values(tasks).some((isSelected) => isSelected) ? 1 : 0),
-    0
-  );
-  const totalSelectedTaskCount = Object.values(
-    selectedBuildVariantTasks
-  ).reduce(
-    (count, taskObj) => count + Object.values(taskObj).filter((v) => v).length,
     0
   );
 
@@ -195,23 +185,13 @@ const ConfigureTasks: React.VFC<Props> = ({
   return (
     <TabContentWrapper>
       <Actions>
-        {/* <LoadingButton
-          data-cy="schedule-patch"
-          variant="primary"
-          onClick={onClickSchedule}
-          disabled={
-            (totalSelectedTaskCount === 0 && aliasCount === 0) || loading
-          }
-          loading={loading}
-        >
-          Schedule
-        </LoadingButton> */}
         <StyledTextInput
           aria-labelledby="search-tasks"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search tasks"
           ref={searchRef}
+          data-cy="task-filter-input"
         />
         <InlineCheckbox
           data-cy="select-all-checkbox"
