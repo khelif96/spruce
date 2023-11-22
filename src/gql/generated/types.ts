@@ -380,7 +380,7 @@ export type Distro = {
   iceCreamSettings: IceCreamSettings;
   isCluster: Scalars["Boolean"]["output"];
   isVirtualWorkStation: Scalars["Boolean"]["output"];
-  mountpoints: Array<Maybe<Scalars["String"]["output"]>>;
+  mountpoints?: Maybe<Array<Maybe<Scalars["String"]["output"]>>>;
   name: Scalars["String"]["output"];
   note: Scalars["String"]["output"];
   plannerSettings: PlannerSettings;
@@ -445,6 +445,7 @@ export type DistroInput = {
   iceCreamSettings: IceCreamSettingsInput;
   isCluster: Scalars["Boolean"]["input"];
   isVirtualWorkStation: Scalars["Boolean"]["input"];
+  mountpoints?: InputMaybe<Array<InputMaybe<Scalars["String"]["input"]>>>;
   name: Scalars["String"]["input"];
   note: Scalars["String"]["input"];
   plannerSettings: PlannerSettingsInput;
@@ -5083,6 +5084,19 @@ export type ScheduleUndispatchedBaseTasksMutation = {
   }> | null;
 };
 
+export type SetLastRevisionMutationVariables = Exact<{
+  projectIdentifier: Scalars["String"]["input"];
+  revision: Scalars["String"]["input"];
+}>;
+
+export type SetLastRevisionMutation = {
+  __typename?: "Mutation";
+  setLastRevision: {
+    __typename?: "SetLastRevisionPayload";
+    mergeBaseRevision: string;
+  };
+};
+
 export type SetPatchPriorityMutationVariables = Exact<{
   patchId: Scalars["String"]["input"];
   priority: Scalars["Int"]["input"];
@@ -8021,6 +8035,24 @@ export type RepoSettingsQuery = {
   };
 };
 
+export type RepotrackerErrorQueryVariables = Exact<{
+  projectIdentifier: Scalars["String"]["input"];
+}>;
+
+export type RepotrackerErrorQuery = {
+  __typename?: "Query";
+  project: {
+    __typename?: "Project";
+    branch: string;
+    id: string;
+    repotrackerError?: {
+      __typename?: "RepotrackerError";
+      exists: boolean;
+      invalidRevision: string;
+    } | null;
+  };
+};
+
 export type SpawnExpirationInfoQueryVariables = Exact<{ [key: string]: never }>;
 
 export type SpawnExpirationInfoQuery = {
@@ -8623,7 +8655,7 @@ export type UserPatchesQuery = {
 };
 
 export type UserProjectSettingsPermissionsQueryVariables = Exact<{
-  [key: string]: never;
+  projectIdentifier: Scalars["String"]["input"];
 }>;
 
 export type UserProjectSettingsPermissionsQuery = {
@@ -8631,7 +8663,11 @@ export type UserProjectSettingsPermissionsQuery = {
   user: {
     __typename?: "User";
     userId: string;
-    permissions: { __typename?: "Permissions"; canCreateProject: boolean };
+    permissions: {
+      __typename?: "Permissions";
+      canCreateProject: boolean;
+      projectPermissions: { __typename?: "ProjectPermissions"; edit: boolean };
+    };
   };
 };
 
@@ -8749,7 +8785,7 @@ export type VersionTaskDurationsQuery = {
         startTime?: Date | null;
         status: string;
         timeTaken?: number | null;
-        executionTasksFull?: Array<{
+        subRows?: Array<{
           __typename?: "Task";
           buildVariantDisplayName?: string | null;
           displayName: string;
@@ -8826,6 +8862,7 @@ export type VersionQuery = {
     __typename?: "Version";
     activated?: boolean | null;
     author: string;
+    authorEmail: string;
     createTime: Date;
     errors: Array<string>;
     finishTime?: Date | null;

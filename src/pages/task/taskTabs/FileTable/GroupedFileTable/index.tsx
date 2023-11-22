@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import Button from "@leafygreen-ui/button";
 import { GuideCue } from "@leafygreen-ui/guide-cue";
-import { useLeafyGreenTable, LGColumnDef } from "@leafygreen-ui/table/new";
+import { useLeafyGreenTable, LGColumnDef } from "@leafygreen-ui/table";
 import Tooltip from "@leafygreen-ui/tooltip";
 import { Subtitle } from "@leafygreen-ui/typography";
 import Cookies from "js-cookie";
