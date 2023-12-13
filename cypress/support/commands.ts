@@ -37,14 +37,10 @@ Cypress.Commands.add(
 /**
  * `enterLoginCredentials` is a custom command to enter login credentials
  */
-function enterLoginCredentials() {
+Cypress.Commands.add("enterLoginCredentials", () => {
   cy.get("input[name=username]").type(user.username);
   cy.get("input[name=password]").type(user.password);
   cy.get("button[id=login-submit]").click();
-}
-
-Cypress.Commands.add("enterLoginCredentials", () => {
-  enterLoginCredentials();
 });
 
 /* getInputByLabel */
@@ -78,14 +74,31 @@ Cypress.Commands.add("logout", () => {
 
 /* toggleTableFilter */
 Cypress.Commands.add("toggleTableFilter", (colNum: number) => {
-  cy.get(`.ant-table-thead > tr > :nth-child(${colNum})`)
-    .find("[role=button]")
-    .first()
-    .click();
+  const selector = `.ant-table-thead > tr > :nth-child(${colNum})`;
+  cy.get(selector).should("be.visible");
+  cy.get(selector).find("[role=button]").first().click();
   cy.get(":not(.ant-dropdown-hidden) > .ant-table-filter-dropdown").should(
     "be.visible"
   );
 });
+
+/* validateTableSort */
+Cypress.Commands.add(
+  "validateTableSort",
+  (direction?: "asc" | "desc" | "none") => {
+    switch (direction) {
+      case "asc":
+        cy.get("svg[aria-label='Sort Ascending Icon']").should("be.visible");
+        return;
+      case "desc":
+        cy.get("svg[aria-label='Sort Descending Icon']").should("be.visible");
+        return;
+      case "none":
+      default:
+        cy.get("svg[aria-label='Unsorted Icon']").should("be.visible");
+    }
+  }
+);
 
 /* validateToast */
 Cypress.Commands.add(
@@ -109,6 +122,7 @@ Cypress.Commands.add(
 Cypress.Commands.add(
   "selectLGOption",
   (label: string, option: string | RegExp) => {
+    cy.getInputByLabel(label).should("not.have.attr", "aria-disabled", "true");
     cy.getInputByLabel(label).click({ force: true }); // open select
     cy.get('[role="listbox"]').should("have.length", 1);
     cy.get('[role="listbox"]').within(() => {
@@ -123,6 +137,19 @@ Cypress.Commands.add("overwriteGQL", (operationName: string, body: any) => {
       req.reply((res) => {
         res.body = body;
       });
+    }
+  });
+});
+
+// TODO: Usage of openExpandableCard introduced in DEVPROD-2415 can be deleted after DEVPROD-2608
+Cypress.Commands.add("openExpandableCard", (cardTitle: string) => {
+  cy.dataCy("expandable-card-title")
+    .contains(cardTitle)
+    .closest("[role='button']")
+    .as("card-btn");
+  cy.get("@card-btn").then(($btn) => {
+    if ($btn.attr("aria-expanded") !== "true") {
+      cy.get("@card-btn").click();
     }
   });
 });

@@ -15,7 +15,6 @@ const files = [
 ];
 
 export default {
-  title: "Pages/Task/table/GroupedFileTable",
   component: GroupedFileTable,
 } satisfies CustomMeta<typeof GroupedFileTable>;
 
