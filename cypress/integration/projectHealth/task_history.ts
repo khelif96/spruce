@@ -11,6 +11,7 @@ describe("task history", () => {
   it("link from task page should link to the commit and scroll to it", () => {
     cy.visit(`/task/${taskId}`);
     cy.contains("See history").should("exist");
+    cy.contains("See history").should("not.be.disabled");
     cy.contains("See history").click();
     cy.location("pathname").should("eq", "/task-history/spruce/check_codegen");
     cy.location("search").should("contain", `selectedCommit=1236`);
